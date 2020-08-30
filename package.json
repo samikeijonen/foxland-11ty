@@ -1,0 +1,62 @@
+{
+	"name": "elevenpack",
+	"version": "1.0.0",
+	"description": "Publish a website using Eleventy, webpack and PostCSS",
+	"author": "Adrian Gheorghe",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/deviousdodo/elevenpack"
+	},
+	"scripts": {
+		"build": "run-s clean build:assets build:site",
+		"build:assets": "cross-env NODE_ENV=production webpack --mode production --config=.config/webpack.config.js",
+		"build:site": "cross-env NODE_ENV=production eleventy",
+		"clean": "rm -rf ./dist",
+		"dev": "run-p dev:*",
+		"dev:assets": "cross-env NODE_ENV=development webpack --watch --config=.config/webpack.config.js",
+		"dev:site": "cross-env NODE_ENV=development eleventy --serve",
+		"lint:css": "stylelint './src/css/**/*.css'",
+		"lint:js": "eslint './src/js/**/*.js'"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "^0.11.0",
+		"@babel/core": "^7.10.2",
+		"@babel/preset-env": "^7.11.0",
+		"@wordpress/a11y": "^2.11.0",
+		"autoprefixer": "^9.8.6",
+		"axios": "^0.20.0",
+		"babel-loader": "^8.1.0",
+		"css-loader": "^4.2.2",
+		"cssnano": "^4.1.10",
+		"flat-cache": "^2.0.1",
+		"mini-css-extract-plugin": "^0.11.0",
+		"npm-run-all": "^4.1.5",
+		"postcss-loader": "^3.0.0",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-manifest-plugin": "^2.2.0"
+	},
+	"devDependencies": {
+		"@10up/eslint-config": "^2.1.1",
+		"@foxland/stylelint-config": "^1.2.0",
+		"@foxland/webpack-tiny-helpers": "^1.0.3",
+		"@wordpress/eslint-plugin": "^7.1.0",
+		"cross-env": "^7.0.2",
+		"eslint": "^7.7.0",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-jsdoc": "^30.3.0",
+		"eslint-plugin-jsx-a11y": "^6.3.1",
+		"eslint-plugin-prettier": "^3.1.4",
+		"eslint-plugin-react": "^7.20.6",
+		"eslint-plugin-react-hooks": "^4.1.0",
+		"luxon": "^1.25.0",
+		"postcss-import": "^12.0.1",
+		"postcss-nested": "^4.2.3",
+		"postcss-preset-env": "^6.7.0",
+		"prettier": "^2.1.1"
+	}
+}

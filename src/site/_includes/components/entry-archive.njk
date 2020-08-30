@@ -1,0 +1,12 @@
+<ul class="entry-archive grid grid--blog reset-list alignwide mx-auto">
+	{%- for post in allArticles -%}
+		<li class="entry-archive__item">
+			<p class="entry__byline mb-0">
+				{{ icon.calendar | safe }}
+				<time class="entry__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+			</p>
+			<h2 class="entry-archive__title h3"><a class="entry-archive__anchor" href="/blog/{{ post.slug }}" class="postlist-link">{% if post.title.rendered %}{{ post.title.rendered }}{% else %}{{ post.slug }}{% endif %}</a></h2>
+			<div class="entry__summary">{{ post.excerpt.rendered | safe }}</div>
+		</li>
+	{%- endfor -%}
+</ul>

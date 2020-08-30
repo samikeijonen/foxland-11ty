@@ -1,0 +1,8 @@
+{
+	"title": "Eleventy and WordPress",
+	"shortDesc": "Testing Eleventy as front-end and WordPress as back-end.",
+	"url": "https://11ty-wp.netlify.com",
+	"authorEmail": "sami.keijonen@foxnet.fi",
+	"authorName": "Sami Keijonen",
+	"maxPostsPerPage": 5
+  }

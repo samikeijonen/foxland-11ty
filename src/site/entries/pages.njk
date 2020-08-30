@@ -1,0 +1,25 @@
+---
+pagination:
+  data: pages
+  size: 1
+  alias: wpPage
+permalink: "/{{ wpPage.link | urlPath }}/index.html"
+---
+
+{% extends "layouts/base.njk" %}
+
+{% set title = wpPage.title.rendered %}
+{% set commentStatus = wpPage.comment_status %}
+{% set id = wpPage.id %}
+
+{% block pageTitle %}
+	<h1 class="entry__title">{{ title | safe }}</h1>
+{% endblock %}
+
+{% block content %}
+	{{ wpPage.content.rendered | safe }}
+{% endblock %}
+
+{% block comments %}
+	{% include "components/comments.njk" %}
+{% endblock %}

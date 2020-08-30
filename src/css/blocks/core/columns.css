@@ -1,0 +1,38 @@
+.wp-block-columns,
+.wp-block-text-columns {
+	margin-bottom: var(--spacing-4x);
+
+	.wp-block-column {
+		margin: 0;
+		width: auto;
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@supports (grid-area: auto) {
+		display: grid;
+		grid-gap: var(--spacing-4x);
+		grid-template-columns: repeat(1, 1fr);
+
+		@media (--screen-sm) {
+			&.has-2-columns {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			&.has-3-columns {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			&.has-4-columns {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+	}
+}
+
+.wp-block-columns.alignfull {
+	padding-left: var(--spacing-2x);
+	padding-right: var(--spacing-2x);
+}

@@ -1,0 +1,25 @@
+---
+title: Blog
+layout: layouts/page.njk
+pagination:
+  data: posts
+  size: 10
+---
+
+{% block content %}
+	{% set allArticles = pagination.items %}
+
+	{% include "components/entry-archive.njk" %}
+
+	{% if pagination.pages.length > 1 %}
+		<nav class="pagination mt-8" aria-label="Newer and older articles">
+			<ol class="pagination__items reset-list">
+				{%- for pageEntry in pagination.pages %}
+					<li class="pagination__item">
+						<a class="pagination__anchor fw-600 block" href="{{ pagination.hrefs[ loop.index - 1 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}><span class="screen-reader-text">Page</span> {{ loop.index }}</a>
+					</li>
+				{%- endfor %}
+			</ol>
+		</nav>
+	{% endif %}
+{% endblock %}

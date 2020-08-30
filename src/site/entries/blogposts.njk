@@ -1,0 +1,44 @@
+---
+pagination:
+  data: posts
+  size: 1
+  alias: blogpost
+permalink: "blog/{{ blogpost.slug }}/index.html"
+---
+
+{% extends "layouts/base.njk" %}
+
+{% set title = blogpost.title.rendered %}
+{% set commentStatus = blogpost.comment_status %}
+{% set id = blogpost.id %}
+{% set author = users | thisPostAuthor(blogpost.author) %}
+
+{% block byline %}
+	<p class="entry__byline mb-0">
+		{{ icon.calendar | safe }}
+		<time class="entry__date mr-4" datetime="{{ blogpost.date | htmlDateString }}">{{ blogpost.date | readableDate }}</time>
+		{{ icon.user | safe }} <span class="screen-reader-text">Written by</span> {{ author[0].name }}
+	</p>
+{% endblock %}
+
+{% block pageTitle %}
+	<h1 class="entry__title">{{ title | safe }}</h1>
+{% endblock %}
+
+{% block content %}
+	{{ blogpost.content.rendered | safe }}
+{% endblock %}
+
+{% block contentFooter %}
+	<div class="entry__footer flow-spacing">
+		<p class="font-sans font-bold has-md-font-size mb-0">Categories:</p>
+		{% include "components/categories.njk" %}
+
+		<p class="font-sans font-bold has-md-font-size mb-0">Tags:</p>
+		{% include "components/tags.njk" %}
+	</div>
+{% endblock %}
+
+{% block comments %}
+	{% include "components/comments.njk" %}
+{% endblock %}
