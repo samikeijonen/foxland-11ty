@@ -16,6 +16,8 @@
 
 .comments__list,
 .comments__list .children {
+	@mixin reset-list;
+
 	.children {
 		padding-left: 3%;
 	}
@@ -26,7 +28,9 @@
 }
 
 .comment__meta {
-	& a {
+	margin-bottom: var(--spacing-4x);
+
+	a {
 		color: var(--color-primary-900);
 		text-decoration: none;
 

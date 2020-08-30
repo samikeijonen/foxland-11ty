@@ -1,6 +1,6 @@
 :root {
 	/* Font families. */
-	--font-family-sans: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-family-sans: "Roboto", sans-serif;
 	--font-family-serif: "Playfair Display", serif;
 	--font-family-mono:
 		"Monaco",
@@ -18,10 +18,7 @@
 	--font-size-3xl: 2rem;
 	--font-size-4xl: 2rem;
 
-	--font-size-body: var(--font-size-lg);
-
 	@media (--screen-md) {
-		--font-size-lg: 1.25rem;
 		--font-size-xl: 1.5rem;
 		--font-size-2xl: 2rem;
 		--font-size-3xl: 2.5rem;
@@ -39,5 +36,6 @@
 	--line-height-md: 1.5;
 
 	/* Letter spacings. */
+	--letter-spacing-sm: 0.05em;
 	--letter-spacing-md: 0.1em;
 }

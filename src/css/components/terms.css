@@ -1,8 +1,8 @@
-.terms__wrapper {
+.terms-wrapper {
 	color: var(--color-grey-500);
 	display: block;
 
-	+ .terms__wrapper {
+	+ .terms-wrapper {
 		margin-top: var(--spacing-2x);
 	}
 

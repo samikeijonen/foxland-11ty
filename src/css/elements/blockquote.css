@@ -1,14 +1,13 @@
 cite {
-	color: var(--color-grey-60);
+	color: var(--color-grey-500);
 }
 
 blockquote {
-	border-left: 0.25rem solid;
-	font-style: italic;
 	margin: 0 0 var(--spacing-4x);
-	padding-left: var(--spacing-3x);
 
 	p {
+		color: var(--color-primary-900);
+		font-family: var(--font-family-serif);
 		font-size: var(--font-size-xl);
 	}
 
@@ -18,5 +17,6 @@ blockquote {
 
 	cite {
 		display: block;
+		font-style: normal;
 	}
 }

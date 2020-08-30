@@ -7,6 +7,7 @@ module.exports = ({ env }) => ({
 				'custom-properties': true,
 			},
 		},
+		'postcss-mixins': {},
 		'postcss-nested': {},
 		autoprefixer: {},
 		// Minify styles on production using cssano.

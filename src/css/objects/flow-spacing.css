@@ -1,22 +1,20 @@
-.entry__content,
-.flow-spacing {
+.entry__content {
 	--flow-space: var(--spacing-4x);
 }
 
-.flow-spacing--sm {
-	--flow-space: var(--spacing-3x);
-}
-
-.flow-spacing--lg {
-	--flow-space: var(--spacing-6x);
-}
-
 .entry__content > * + *,
-.flow-spacing > * + *,
 .wp-block-group__inner-container > * + *,
-.wp-block-cover__inner-container > * + * {
+.wp-block-cover__inner-container > * + *,
+.wp-block-column > * + * {
 	margin-bottom: 0;
 	margin-top: var(--flow-space);
+}
+
+.entry__content > :first-child,
+.wp-block-group__inner-container > :first-child,
+.wp-block-cover__inner-container > :first-child,
+.wp-block-column > :first-child {
+	margin-bottom: 0;
 }
 
 .entry__content > h2,

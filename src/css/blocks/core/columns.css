@@ -1,7 +1,4 @@
-.wp-block-columns,
-.wp-block-text-columns {
-	margin-bottom: var(--spacing-4x);
-
+.wp-block-columns {
 	.wp-block-column {
 		margin: 0;
 		width: auto;
@@ -13,26 +10,61 @@
 
 	@supports (grid-area: auto) {
 		display: grid;
-		grid-gap: var(--spacing-4x);
-		grid-template-columns: repeat(1, 1fr);
+		grid-gap: var(--spacing-7x);
+		grid-template-columns: 1fr;
 
-		@media (--screen-sm) {
-			&.has-2-columns {
-				grid-template-columns: repeat(2, 1fr);
+		@media (--screen-md) {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+			&.are-vertically-aligned-top {
+				align-items: flex-start;
 			}
 
-			&.has-3-columns {
-				grid-template-columns: repeat(3, 1fr);
+			&.are-vertically-aligned-center {
+				align-items: center;
 			}
 
-			&.has-4-columns {
-				grid-template-columns: repeat(4, 1fr);
+			&.are-vertically-aligned-bottom {
+				align-items: flex-end;
+			}
+
+			&.has-2col-1col {
+				& .wp-block-column:first-child {
+					grid-column: span 2;
+				}
+
+				& .wp-block-column:nth-child(2) {
+					grid-column: span 1;
+				}
 			}
 		}
 	}
 }
 
-.wp-block-columns.alignfull {
-	padding-left: var(--spacing-2x);
-	padding-right: var(--spacing-2x);
+.is-style-columns-card {
+
+	.wp-block-column {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		min-height: var(--spacing-2x);
+
+		& > * {
+			margin-bottom: var(--spacing-2x);
+			margin-top: 0;
+		}
+
+		& > p {
+			margin-bottom: var(--spacing-4x);
+		}
+
+		& > :last-child {
+			margin-top: auto;
+		}
+	}
+
+	h2 a,
+	h3 a {
+		text-decoration: none;
+	}
 }

@@ -7,9 +7,9 @@
 	}
 
 	&__comment-meta {
-		font-size: var(--font-size-1);
+		font-size: var(--font-size-md);
 		margin-bottom: var(--spacing-2x);
-		margin-top: var(--spacing-);
+		margin-top: var(--spacing);
 	}
 
 	&__comment-date {

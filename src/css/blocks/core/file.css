@@ -1,16 +1,7 @@
 .wp-block-file {
-	margin-bottom: var(--spacing-4x);
-
 	&__button {
-		background-color: var(--color-primary);
-		border: 2px solid transparent;
-		border-radius: 0;
-		color: var(--color-white);
-		display: inline-block;
-		font-weight: 700;
+		@mixin button-block;
 		margin-left: var(--spacing-2x);
-		padding: calc(var(--spacing) * 1.5) calc(var(--spacing-2x) * 1.25);
-		text-decoration: none;
 
 		&:visited {
 			color: var(--color-white);
@@ -19,9 +10,7 @@
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: var(--color-primary-900);
-			color: var(--color-white);
-			outline-offset: -2px;
+			@mixin button-block-hover;
 		}
 	}
 }

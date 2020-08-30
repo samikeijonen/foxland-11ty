@@ -1,0 +1,4 @@
+.is-style-image-with-bg {
+	background-color: var(--color-grey-100);
+	padding: var(--spacing-4x);
+}

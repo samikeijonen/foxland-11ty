@@ -17,15 +17,14 @@ figure {
 	margin: 0 0 var(--spacing-4x);
 
 	img {
-		margin-left: auto;
-		margin-right: auto;
+		@mixin center-block;
 	}
 }
 
 figcaption {
-	color: var(--color-grey-60);
+	color: var(--color-grey-500);
 	font-size: var(--font-size-md);
 	margin: var(--spacing-2x) auto;
-	max-width: var(--max-w-md);
+	max-width: var(--max-width-md);
 	text-align: center;
 }

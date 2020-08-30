@@ -1,10 +1,9 @@
 textarea {
 	/* Removes empty space under textarea. */
 	display: block;
-	min-height: calc(var(--spacing) * 13);
+	min-height: calc(var(--spacing-) * 13);
 }
 
-input,
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -23,20 +22,20 @@ input[type="color"],
 textarea,
 select {
 	background-color: var(--color-white);
-	border: 2px solid var(--color-primary);
+	border: 2px solid var(--color-grey-500);
 	border-radius: 0;
 	padding: var(--spacing);
 	width: 100%;
 
 	&:focus {
-		box-shadow: 0 0 4px var(--color-primary-shadow);
+		border-color: var(--color-primary);
+		box-shadow: 0 0 var(--spacing-sm) var(--color-primary-shadow);
 		/* Use transparent outline for Windows high contrast mode. */
 		outline: 2px solid transparent;
 	}
 }
 
 label {
-	color: var(--color-primary-900);
 	display: block;
-	font-weight: 500;
+	font-weight: 700;
 }

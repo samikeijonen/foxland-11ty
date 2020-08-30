@@ -3,8 +3,9 @@
 	font-size: var(--font-size-sm);
 }
 
-.has-medium-font-size {
-	font-size: var(--font-size-md);
+.has-medium-font-size,
+.is-style-small-font-size {
+	font-size: var(--font-size-xl);
 }
 
 .has-large-font-size {

@@ -1,0 +1,92 @@
+@define-mixin typography {
+	color: var(--color-grey-700);
+	font-family: var(--font-family-sans);
+	font-size: var(--font-size-lg);
+	line-height: var(--line-height-md);
+	word-wrap: break-word;
+}
+
+@define-mixin center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@define-mixin center-block {
+	display: block;
+	@mixin center;
+}
+
+@define-mixin reset-margin-padding {
+	margin: 0;
+	padding: 0;
+}
+
+@define-mixin reset-list {
+	@mixin reset-margin-padding;
+	list-style-type: none;
+}
+
+@define-mixin global-transition {
+	transition: all var(--transition-duration-md) ease-in-out;
+}
+
+@define-mixin button-block {
+	background-color: var(--color-primary);
+	border: none;
+	border-radius: 0;
+	color: var(--color-white);
+	font-weight: 500;
+	letter-spacing: var(--letter-spacing-md);
+	padding: calc(var(--spacing) * 1.5) calc(var(--spacing-2x) * 1.25);
+}
+
+@define-mixin button-block-hover {
+	background-color: var(--color-primary-900);
+	color: var(--color-white);
+	outline-offset: -2px;
+}
+
+@define-mixin button-block-outline {
+	background-color: transparent;
+	border: 2px solid;
+	border-radius: 0;
+	color: var(--color-primary-900);
+}
+
+@define-mixin button-block-outline-hover {
+	background-color: var(--color-primary-900);
+	border-color: var(--color-primary-900);
+	color: var(--color-white);
+}
+
+@define-mixin button-block-underlined {
+	background-color: transparent;
+	border-bottom: 2px solid;
+	border-radius: 0;
+	color: var(--color-primary-700);
+	padding: 0;
+}
+
+@define-mixin button-block-underlined-hover {
+	color: var(--color-primary-900);
+}
+
+@define-mixin global-focus-styles {
+	outline: thin dotted;
+}
+
+@define-mixin subheading {
+	color: var(--color-grey-500);
+	font-size: var(--font-size-xl);
+	font-style: normal;
+	text-align: center;
+}
+
+@define-mixin hr-styles {
+	background-color: var(--color-grey-100);
+	border: 0;
+	height: var(--spacing-sm);
+	margin-bottom: calc(var(--spacing) * 8);
+	margin-top: calc(var(--spacing) * 8);
+	max-width: calc(var(--spacing-2x) * 13);
+}

@@ -1,0 +1,15 @@
+.latest-posts {
+	display: grid;
+	grid-gap: var(--spacing-7x);
+	grid-template-columns: 1fr;
+
+	@media (--screen-md) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.latest-posts > .entry:first-child {
+	@media (--screen-md) {
+		grid-row: 1 / 5;
+	}
+}

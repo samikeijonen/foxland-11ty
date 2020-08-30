@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% bundledCss %}
+		<title>{{ title }} - {{ site.title }}</title>
+	</head>
+	<body>
+		<div class="site mx-auto max-w-2xl">
+			<header class="site-header px-2 py-4">
+				<div class="site-header__wrapper mx-auto max-width-xl">
+					<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+					{% include "components/branding.njk" %}
+					{% include "components/nav.njk" %}
+				</div>
+			</header>
+
+			<main id="main" class="site-main px-2 py-6 mx-auto max-w-xl">

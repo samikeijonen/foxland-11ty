@@ -1,0 +1,23 @@
+.menu-toggle {
+	margin-top: var(--spacing-2x);
+	width: 100%;
+
+	& svg {
+		transition: transform var(--transition-duration-md);
+	}
+
+	&.is-opened {
+		& svg {
+			transform: rotate(-180deg);
+		}
+	}
+
+	@media (--screen-md) {
+		display: none;
+	}
+}
+
+/* Hide menu toggle when there is no JS. */
+.no-js .menu-toggle {
+	display: none;
+}

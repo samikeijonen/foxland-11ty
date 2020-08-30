@@ -12,10 +12,16 @@
 @import "settings/media-queries.css"; /* Needs to come first, others are using it. */
 @import "settings/colors.css";
 @import "settings/fonts.css";
-@import "settings/max-width.css";
 @import "settings/spacing.css";
 @import "settings/transitions.css";
 @import "settings/typography.css";
+@import "settings/widths.css";
+
+
+/*--------------------------------------------------------------
+# Tools - Default mixins and functions.
+--------------------------------------------------------------*/
+@import "tools/mixins.css";
 
 
 /*--------------------------------------------------------------
@@ -48,10 +54,10 @@
 --------------------------------------------------------------*/
 @import "objects/animations.css";
 @import "objects/flow-spacing.css";
-@import "objects/helpers.css";
-@import "objects/icon.css";
+@import "objects/icons.css";
 @import "objects/layouts.css";
 @import "objects/max-widths.css";
+@import "objects/wrappers.css";
 
 
 /*--------------------------------------------------------------
@@ -65,10 +71,10 @@
 @import "blocks/core/file.css";
 @import "blocks/core/gallery.css";
 @import "blocks/core/group.css";
+@import "blocks/core/image.css";
 @import "blocks/core/latest-comments.css";
 @import "blocks/core/latest-posts.css";
 @import "blocks/core/media-text.css";
-@import "blocks/core/navigation.css";
 @import "blocks/core/paragraph.css";
 @import "blocks/core/pullquote.css";
 @import "blocks/core/quote.css";
@@ -81,28 +87,33 @@
 /*--------------------------------------------------------------
 # Components - specific UI components.
 --------------------------------------------------------------*/
-@import "components/archive.css";
+@import "components/nav/primary.css";
+@import "components/nav/social.css";
+@import "components/nav/toggle.css";
+
+@import "components/archive-header.css";
 @import "components/comments.css";
 @import "components/entry.css";
-@import "components/gallery.css";
-@import "components/nav.css";
+@import "components/galleries.css";
+@import "components/latest-posts.css";
+@import "components/media.css";
 @import "components/pagination.css";
-@import "components/sidebar.css";
-@import "components/spinner.css";
+@import "components/search.css";
+@import "components/site-header.css";
+@import "components/site-footer.css";
 @import "components/terms.css";
-@import "components/widget.css";
-@import "components/wp-media.css";
+@import "components/widgets.css";
 
 
 /*--------------------------------------------------------------
 # Utilities - Helpers and overrides.
 --------------------------------------------------------------*/
 @import "utilities/accessibility.css";
-@import "utilities/alignment.css";
+@import "utilities/alignments.css";
 @import "utilities/color-palette.css";
 @import "utilities/font-sizes.css";
 @import "utilities/helpers.css";
-@import "utilities/max-width.css";
 @import "utilities/prefers-reduced-motion.css";
 @import "utilities/spacing.css";
 @import "utilities/text.css";
+@import "utilities/wp-legacy.css";

@@ -1,7 +1,3 @@
-.wp-block-search {
-	margin-bottom: var(--spacing-4x);
-}
-
 .wp-block-search__button {
-	margin-top: var(--spacing-);
+	margin-top: var(--spacing);
 }

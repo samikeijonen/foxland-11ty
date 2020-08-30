@@ -1,6 +1,6 @@
 ---
 title: Blog
-layout: layouts/page.njk
+layout: layouts/archive.njk
 pagination:
   data: posts
   size: 10
@@ -8,6 +8,7 @@ pagination:
 
 {% block content %}
 	{% set allArticles = pagination.items %}
+	{% set archiveTitle = 'Blogs' %}
 
 	{% include "components/entry-archive.njk" %}
 
@@ -16,7 +17,7 @@ pagination:
 			<ol class="pagination__items reset-list">
 				{%- for pageEntry in pagination.pages %}
 					<li class="pagination__item">
-						<a class="pagination__anchor fw-600 block" href="{{ pagination.hrefs[ loop.index - 1 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}><span class="screen-reader-text">Page</span> {{ loop.index }}</a>
+						<a class="pagination__anchor fw-600" href="{{ pagination.hrefs[ loop.index - 1 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}><span class="screen-reader-text">Page</span>{{ loop.index }}</a>
 					</li>
 				{%- endfor %}
 			</ol>

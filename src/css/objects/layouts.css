@@ -1,27 +1,16 @@
-.flex {
-	display: flex;
-}
+@media (--screen-md) {
 
-.justify-between {
-	justify-content: space-between;
-}
+	@supports (grid-area: auto) {
 
-.items-center {
-	align-items: center;
-}
-
-@supports (grid-area: auto) {
-
-	.grid {
-		display: grid;
-		grid-gap: calc(var(--spacing-2x) * 4);
-		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-
-		@media (--screen-md) {
-			&--blog {
-				grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
-			}
+		.grid {
+			display: grid;
+			grid-gap: var(--spacing-7x);
+			grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 		}
-	}
 
+	}
+}
+
+.page-template-entry-no-header .app-main {
+	padding-top: 0;
 }

@@ -2,11 +2,20 @@
 	a {
 		color: inherit;
 	}
+
+	@supports (grid-area: auto) {
+		&__grid {
+			display: grid;
+			grid-gap: var(--spacing-7x);
+			grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		}
+
+	}
 }
 
 .widget {
 	font-size: var(--font-size-md);
-	margin-bottom: var(--spacing-4x);
+	margin: 0 0 var(--spacing-4x);
 
 	@supports (grid-area: auto) {
 		margin-bottom: 0;

@@ -3,6 +3,7 @@
 }
 
 .h-decoration-underline {
+
 	&:hover,
 	&:focus,
 	&:active {
@@ -22,10 +23,6 @@
 	font-weight: 500;
 }
 
-.fw-600 {
-	font-weight: 600;
-}
-
 .fw-700 {
 	font-weight: 700;
 }
@@ -34,6 +31,32 @@
 	font-size: var(--font-size-md);
 }
 
+.color-grey-100 {
+	color: var(--color-grey-100);
+}
+
+.color-grey-700 {
+	color: var(--color-grey-700);
+}
+
+.text-center {
+	text-align: center;
+}
+
 .block {
 	display: block;
+}
+
+.reset-list {
+	@mixin reset-list;
+}
+
+.underline-link {
+	border-bottom: 2px solid;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.flex {
+	display: flex;
 }

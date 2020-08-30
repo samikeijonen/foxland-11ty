@@ -8,13 +8,10 @@ input,
 optgroup,
 select,
 textarea {
-	color: var(--color-grey-70);
-	font-family: var(--font-family-sans);
-	font-size: var(--font-size-body);
-	line-height: var(--line-height-md);
-	word-wrap: break-word;
+	@mixin typography;
 }
 
+/* Fallback for when there is no custom background color defined. */
 body {
-	background-color: var(--color-primary-100);
+	background: var(--color-white);
 }

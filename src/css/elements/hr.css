@@ -1,8 +1,4 @@
 hr {
-	background-color: var(--color-primary-100);
-	border: 0;
-	height: var(--spacingsmall);
-	margin-bottom: calc(var(--spacing-) * 8);
-	margin-top: calc(var(--spacing-) * 8);
-	max-width: calc(var(--spacing-2x) * 13);
+	@mixin center-block;
+	@mixin hr-styles;
 }

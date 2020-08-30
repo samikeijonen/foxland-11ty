@@ -2,7 +2,7 @@
 	&::first-letter {
 		float: left;
 		font-family: serif;
-		font-size: var(--font-size-2xl);
+		font-size: var(--font-size-3xl);
 		font-style: normal;
 		font-weight: 600;
 		margin-right: var(--spacing-2x);
@@ -12,26 +12,13 @@
 
 .is-style-ingress,
 .is-style-ingress.wp-block-paragraph {
-	color: var(--color-grey-60);
+	color: var(--color-grey-500);
 	font-size: var(--font-size-xl);
 }
 
 .is-style-highlight,
 .is-style-highlight.wp-block-paragraph {
-	background-color: var(--color-primary-100);
-	padding: var(--spacing-3x);
-}
-
-.is-style-success,
-.is-style-success.wp-block-paragraph {
-	background-color: var(--color-success-100);
-	border-left: var(--spacing-sm) solid var(--color-success-500);
-	padding: var(--spacing-3x);
-}
-
-.is-style-error,
-.is-style-error.wp-block-paragraph {
-	background-color: var(--color-error-100);
-	border-left: var(--spacing-sm) solid var(--color-error-500);
-	padding: var(--spacing-3x);
+	font-family: var(--font-family-serif);
+	font-size: var(--font-size-4xl);
+	line-height: var(--line-height-sm);
 }

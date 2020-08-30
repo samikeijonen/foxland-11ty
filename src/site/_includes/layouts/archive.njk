@@ -1,0 +1,11 @@
+{% include "components/header.njk" %}
+
+	<div class="archive-header mx-auto max-width-md pb-8 text-center">
+		<h1 class="archive-header__title">{{ title }}</h1>
+	</div>
+
+	{% block content %}
+		{{ content | safe }}
+	{% endblock %}
+
+{% include "components/footer.njk" %}

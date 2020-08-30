@@ -1,7 +1,7 @@
 {
-	"title": "Eleventy and WordPress",
-	"shortDesc": "Testing Eleventy as front-end and WordPress as back-end.",
-	"url": "https://11ty-wp.netlify.com",
+	"title": "Foxland",
+	"shortDesc": "Building web accessibility on mind.",
+	"url": "https://foxland.fi",
 	"authorEmail": "sami.keijonen@foxnet.fi",
 	"authorName": "Sami Keijonen",
 	"maxPostsPerPage": 5

@@ -1,0 +1,31 @@
+.nav__items--social {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	& > li {
+		margin-bottom: var(--spacing-2x);
+		margin-left: var(--spacing);
+		margin-right: var(--spacing);
+	}
+}
+
+.nav__anchor--social {
+	background-color: var(--color-primary-900);
+	border-radius: 50%;
+	color: var(--color-grey-100);
+	display: block;
+	padding: var(--spacing-2x);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: var(--color-primary);
+		color: var(--color-white);
+	}
+
+	& .icon {
+		height: 1.5em;
+		width: 1.5em;
+	}
+}

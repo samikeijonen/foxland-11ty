@@ -1,9 +1,9 @@
 :root {
+	/* Spacing. */
 	--spacing-sm: 4px;
 	--spacing: 0.5rem;
 	--spacing-2x: 1rem;
 	--spacing-3x: 1.5rem;
-	--spacing-4x: 2rem;
 	--spacing-4x: 2rem;
 	--spacing-5x: 2.5rem;
 	--spacing-6x: 3rem;
@@ -13,4 +13,8 @@
 	--spacing-10x: 5rem;
 	--spacing-11x: 5.5rem;
 	--spacing-12x: 6rem;
+	--spacing-13x: 6.5rem;
+	--spacing-14x: 7rem;
+	--spacing-15x: 7.5rem;
+	--spacing-16x: 8rem;
 }

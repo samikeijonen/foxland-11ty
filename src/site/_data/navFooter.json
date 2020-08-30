@@ -1,16 +1,19 @@
 {
 	"items": [
 		{
-			"text": "Home",
-			"url": "/"
+			"text": "Twitter",
+			"url": "https://twitter.com/samikeijonen",
+			"icon": "twitter"
 		},
 		{
-			"text": "Blog",
-			"url": "/blog/"
+			"text": "Github",
+			"url": "https://github.com/samikeijonen",
+			"icon": "github"
 		},
 		{
-			"text": "About",
-			"url": "/about/"
+			"text": "WordPress",
+			"url": "http://profiles.wordpress.org/samikeijonen",
+			"icon": "wordpress"
 		}
 	]
 }
