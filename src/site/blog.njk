@@ -9,7 +9,7 @@ pagination:
 {% block content %}
 	{% set allArticles = pagination.items %}
 	{% set archiveTitle = 'Blogs' %}
-	{% set prefixSlug = '' %}
+	{% set prefixSlug = '/' %}
 
 	{% include "components/entry-archive.njk" %}
 
