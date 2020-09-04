@@ -2,7 +2,7 @@
 	<article class="entry entry--archive">
 		<header class="entry__header">
 			<h2 class="entry__title">
-				<a class="decoration-none h-decoration-underline color-dark" href="/blog/{{ post.slug }}">
+				<a class="decoration-none h-decoration-underline color-dark" href="{{ prefixSlug }}{{ post.slug }}">
 					{% if post.title.rendered %}{{ post.title.rendered }}{% else %}{{ post.slug }}{% endif %}
 				</a>
 			</h2>

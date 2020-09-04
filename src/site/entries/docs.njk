@@ -1,20 +1,20 @@
 ---
 pagination:
-  data: pages
+  data: docs
   size: 1
-  alias: wpPage
-permalink: "/{{ wpPage.link | urlPath }}/index.html"
+  alias: doc
+permalink: "{{ doc.link | urlPath }}/index.html"
 ---
 
 {% extends "layouts/base.njk" %}
 
-{% set title = wpPage.title.rendered %}
-{% set id = wpPage.id %}
+{% set title = doc.title.rendered %}
+{% set id = doc.id %}
 
 {% block pageTitle %}
 	<h1 class="entry__title">{{ title | safe }}</h1>
 {% endblock %}
 
 {% block content %}
-	{{ wpPage.content.rendered | safe }}
+	{{ doc.content.rendered | safe }}
 {% endblock %}

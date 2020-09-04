@@ -3,13 +3,12 @@ pagination:
   data: posts
   size: 1
   alias: blogpost
-permalink: "blog/{{ blogpost.slug }}/index.html"
+permalink: "{{ blogpost.slug }}/index.html"
 ---
 
 {% extends "layouts/base.njk" %}
 
 {% set title = blogpost.title.rendered %}
-{% set commentStatus = blogpost.comment_status %}
 {% set id = blogpost.id %}
 {% set author = users | thisPostAuthor(blogpost.author) %}
 
@@ -37,8 +36,4 @@ permalink: "blog/{{ blogpost.slug }}/index.html"
 		<p class="font-sans font-bold has-md-font-size mb-0">Tags:</p>
 		{% include "components/tags.njk" %}
 	</div>
-{% endblock %}
-
-{% block comments %}
-	{% include "components/comments.njk" %}
 {% endblock %}

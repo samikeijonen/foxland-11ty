@@ -1,15 +1,15 @@
 ---
-title: Blog
+title: Docs
 layout: layouts/archive.njk
 pagination:
-  data: posts
+  data: docs
   size: 10
 ---
 
 {% block content %}
 	{% set allArticles = pagination.items %}
-	{% set archiveTitle = 'Blogs' %}
-	{% set prefixSlug = '' %}
+	{% set archiveTitle = 'Docs' %}
+	{% set prefixSlug = '/doc/' %}
 
 	{% include "components/entry-archive.njk" %}
 
