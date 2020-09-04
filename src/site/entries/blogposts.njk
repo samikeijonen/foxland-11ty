@@ -30,10 +30,10 @@ permalink: "{{ blogpost.slug }}/index.html"
 
 {% block contentFooter %}
 	<div class="entry__footer flow-spacing">
-		<p class="font-sans font-bold has-md-font-size mb-0">Categories:</p>
+		<p class="entry__terms-title mb-0">Categories:</p>
 		{% include "components/categories.njk" %}
 
-		<p class="font-sans font-bold has-md-font-size mb-0">Tags:</p>
+		<p class="entry__terms-title mb-0 mt-4">Tags:</p>
 		{% include "components/tags.njk" %}
 	</div>
 {% endblock %}

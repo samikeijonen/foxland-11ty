@@ -7,7 +7,8 @@
 	padding-bottom: var(--spacing-8x);
 }
 
-.entry__byline {
+.entry__byline,
+.entry__terms-title {
 	color: var(--color-grey-500);
 	font-size: var(--font-size-sm);
 	letter-spacing: var(--letter-spacing-sm);
@@ -32,4 +33,27 @@
 
 .entry__footer {
 	margin-top: var(--spacing-4x);
+}
+
+.entry__terms-item {
+	margin-right: var(--spacing-2x);
+	margin-top: var(--spacing-2x);
+}
+
+.entry__terms-anchor {
+	background-color: var(--color-grey-200);
+	border-radius: 2px;
+	color: var(--color-grey-900);
+	padding: var(--spacing-sm) var(--spacing-2x);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: var(--color-grey-700);
+		color: var(--color-white);
+	}
+
+	&:focus {
+		outline-offset: -2px;
+	}
 }
