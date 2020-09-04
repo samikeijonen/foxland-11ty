@@ -28,7 +28,7 @@
 	margin-top: var(--spacing-3x);
 }
 
-.wp-block-quote .svg {
+.wp-block-quote .icon {
 	color: var(--color-primary);
 	height: 2em;
 	position: absolute;

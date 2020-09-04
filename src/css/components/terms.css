@@ -2,15 +2,15 @@
 	color: var(--color-grey-500);
 	display: block;
 
-	+ .terms-wrapper {
+	& + .terms-wrapper {
 		margin-top: var(--spacing-2x);
 	}
 
-	.svg {
+	& .icon {
 		margin-right: var(--spacing-2x);
 	}
 
-	a {
+	& a {
 		color: var(--color-grey-500);
 		font-size: var(--font-size-md);
 		font-weight: 700;
