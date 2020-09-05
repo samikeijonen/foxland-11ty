@@ -8,6 +8,7 @@ permalink: "/category/{{ categories[pagination.pageNumber].slug }}/index.html"
 {% extends "layouts/archive.njk" %}
 
 {% set title = categories[pagination.pageNumber].name %}
+{% set prefixSlug = '/' %}
 
 {% set allArticles = posts | postsByCategoryId(categories[pagination.pageNumber].id) %}
 
