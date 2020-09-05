@@ -1,4 +1,4 @@
-module.exports = ({ env }) => ({
+module.exports = ({ env, file }) => ({
 	plugins: {
 		'postcss-import': {},
 		'postcss-preset-env': {
@@ -10,6 +10,29 @@ module.exports = ({ env }) => ({
 		'postcss-mixins': {},
 		'postcss-nested': {},
 		autoprefixer: {},
+		// Prefix editor styles with class `editor-styles-wrapper`.
+		'postcss-editor-styles': 'editor.css' === file.basename ?
+			{
+				scopeTo: '.editor-styles-wrapper',
+				ignore: [
+					':root',
+					'.edit-post-visual-editor.editor-styles-wrapper',
+				],
+				remove: [
+					'html',
+					':disabled',
+					'[readonly]',
+					'[disabled]',
+				],
+				tags: [
+					'button',
+					'input',
+					'label',
+					'select',
+					'textarea',
+					'form',
+				],
+			} : false,
 		// Minify styles on production using cssano.
 		cssnano:
 			env === 'production'

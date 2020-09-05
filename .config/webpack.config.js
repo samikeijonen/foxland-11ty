@@ -14,6 +14,7 @@ const config = presetsConfig( {
 	entry: {
 		index: filePath( 'src/js/index.js' ),
 		main: filePath( 'src/css/main.css' ),
+		editor: filePath( 'src/css/editor.css' ),
 	},
 	output: {
 		path: filePath( 'dist/assets' ),
