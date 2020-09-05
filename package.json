@@ -1,12 +1,12 @@
 {
-	"name": "elevenpack",
+	"name": "foxland",
 	"version": "1.0.0",
-	"description": "Publish a website using Eleventy, webpack and PostCSS",
-	"author": "Adrian Gheorghe",
+	"description": "Foxland site with Eleventy",
+	"author": "Sami Keijonen",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/deviousdodo/elevenpack"
+		"url": "https://github.com/samikeijonen/foxland-11ty"
 	},
 	"scripts": {
 		"build": "run-s clean build:assets build:site",
