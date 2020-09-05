@@ -2,4 +2,4 @@
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"
     [headers.values]
-    Access-Control-Allow-Origin = "https://foxnet.fi"
+    Access-Control-Allow-Origin = "https://foxland.foxnet.fi"
