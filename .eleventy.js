@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { DateTime } = require("luxon");
+const htmlmin = require("html-minifier");
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -92,6 +93,20 @@ module.exports = function(eleventyConfig) {
 	// A debug utility.
 	eleventyConfig.addFilter("dump", obj => {
 		return util.inspect(obj);
+	});
+
+	eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+		if( outputPath.endsWith('.html') ) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true
+			});
+
+			return minified;
+		}
+
+		return content;
 	});
 
 	// Copy all images directly to dist.
