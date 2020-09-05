@@ -13,7 +13,7 @@ permalink: "{{ blogpost.slug }}/index.html"
 {% set author = users | thisPostAuthor(blogpost.author) %}
 
 {% block byline %}
-	<p class="entry__byline mb-0">
+	<p class="entry__byline mb-0 fw-500">
 		{{ icon.calendar | safe }}
 		<time class="entry__date mr-3" datetime="{{ blogpost.date | htmlDateString }}">{{ blogpost.date | readableDate }}</time>
 		{{ icon.user | safe }} <span class="screen-reader-text">Written by</span> {{ author[0].name }}
@@ -29,11 +29,11 @@ permalink: "{{ blogpost.slug }}/index.html"
 {% endblock %}
 
 {% block contentFooter %}
-	<div class="entry__footer flow-spacing">
-		<p class="entry__terms-title mb-0">Categories:</p>
+	<div class="entry__footer flow-spacing mt-8">
+		<p class="entry__terms-title fw-500 mb-0">Categories:</p>
 		{% include "components/categories.njk" %}
 
-		<p class="entry__terms-title mb-0 mt-4">Tags:</p>
+		<p class="entry__terms-title fw-500 mb-0 mt-4">Tags:</p>
 		{% include "components/tags.njk" %}
 	</div>
 {% endblock %}

@@ -26,6 +26,7 @@
 	}
 
 	@media (--screen-lg) {
+		--font-size-lg: 1.25rem;
 		--font-size-2xl: 2.5rem;
 		--font-size-3xl: 3rem;
 		--font-size-4xl: 3.5rem;

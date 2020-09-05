@@ -31,10 +31,6 @@
 	margin-bottom: 0;
 }
 
-.entry__footer {
-	margin-top: var(--spacing-4x);
-}
-
 .entry__terms-item {
 	margin-right: var(--spacing-2x);
 	margin-top: var(--spacing-2x);
