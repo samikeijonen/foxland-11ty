@@ -15,7 +15,7 @@ permalink: "{{ blogpost.slug }}/index.html"
 {% block byline %}
 	<p class="entry__byline mb-0">
 		{{ icon.calendar | safe }}
-		<time class="entry__date mr-4" datetime="{{ blogpost.date | htmlDateString }}">{{ blogpost.date | readableDate }}</time>
+		<time class="entry__date mr-3" datetime="{{ blogpost.date | htmlDateString }}">{{ blogpost.date | readableDate }}</time>
 		{{ icon.user | safe }} <span class="screen-reader-text">Written by</span> {{ author[0].name }}
 	</p>
 {% endblock %}
