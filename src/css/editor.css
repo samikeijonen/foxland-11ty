@@ -118,6 +118,7 @@
 
 /* Post title. */
 .editor-post-title__block .editor-post-title__input {
+	color: var(--color-primary-900);
 	font-family: var(--font-family-serif);
 	font-size: var(--font-size-3xl);
 	min-height: auto;
@@ -131,7 +132,7 @@
 
 /* Main column width. */
 .wp-block {
-	max-width: calc(var(--max-width-md) + 2rem);
+	max-width: var(--max-width-md);
 }
 
 /* Width of "wide" blocks. */

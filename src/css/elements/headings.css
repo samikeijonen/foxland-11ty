@@ -3,7 +3,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h1.wp-block,
+h2.wp-block,
+h3.wp-block,
+h4.wp-block,
+h5.wp-block,
+h6.wp-block {
 	color: var(--color-primary-900);
 	font-family: var(--font-family-serif);
 	margin: 0 0 var(--spacing-2x);
@@ -11,38 +17,38 @@ h6 {
 
 h1,
 .h1,
-h1.wp-block-heading {
+h1.wp-block {
 	font-size: var(--font-size-3xl);
 	line-height: var(--line-height-sm);
 }
 
 h2,
 .h2,
-h2.wp-block-heading {
+h2.wp-block {
 	font-size: var(--font-size-2xl);
 	line-height: var(--line-height-sm);
 }
 
 h3,
 .h3,
-.wp-block-heading h3.editor-rich-text__tinymce {
+h3.wp-block {
 	font-size: var(--font-size-xl);
 }
 
 h4,
 .h4,
-.wp-block-heading h4.editor-rich-text__tinymce {
+h4.wp-block {
 	font-size: var(--font-size-lg);
 }
 
 h5,
 .h5,
-.wp-block-heading h5.editor-rich-text__tinymce {
+h5.wp-block {
 	font-size: var(--font-size-lg);
 }
 
 h6,
 .h6,
-.wp-block-heading h6.editor-rich-text__tinymce {
+h6.wp-block {
 	font-size: var(--font-size-lg);
 }
