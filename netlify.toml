@@ -3,7 +3,6 @@
   for = "/*"
     [headers.values]
     	Access-Control-Allow-Origin = "https://foxland.foxnet.fi"
-			X-Frame-Options = "SAMEORIGIN"
-			X-XXS-Protection = "1; mode=block"
-			X-Content-Type-Options = "nosniff"
-			Content-Security-Policy = "default-src 'self' *.foxnet.fi"
+		X-Frame-Options = "SAMEORIGIN"
+		X-XXS-Protection = "1; mode=block"
+		X-Content-Type-Options = "nosniff"
