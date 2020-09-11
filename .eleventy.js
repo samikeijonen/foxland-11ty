@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
 	// Adds a universal shortcode to embed bundled JS. In Nunjack templates: {% bundledJs %}
 	eleventyConfig.addShortcode("bundledJs", function() {
 	return manifest["index.js"]
-		? `<script src="${manifest["index.js"]}"></script>`
+		? `<script async src="${manifest["index.js"]}"></script>`
 		: "";
 	});
 
