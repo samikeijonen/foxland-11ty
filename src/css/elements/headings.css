@@ -12,7 +12,6 @@ h5.wp-block,
 h6.wp-block {
 	color: var(--color-primary-900);
 	font-family: var(--font-family-serif);
-	margin: 0 0 var(--spacing-2x);
 }
 
 h1,
