@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl request
-        run: curl -X POST -d {} NETLIFY_BUILD_HOOK
+        run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
