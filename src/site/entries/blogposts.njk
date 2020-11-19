@@ -13,7 +13,7 @@ permalink: "{{ blogpost.slug }}/index.html"
 {% set author = users | thisPostAuthor(blogpost.author) %}
 
 {% block byline %}
-	<p class="entry__byline fw-500 mb-0">
+	<p class="entry__byline fw-500 mt-2 mb-0">
 		{{ icon.calendar | safe }}
 		<time class="entry__date mr-3" datetime="{{ blogpost.date | htmlDateString }}">{{ blogpost.date | readableDate }}</time>
 		{{ icon.user | safe }} <span class="screen-reader-text">Written by</span> {{ author[0].name }}
