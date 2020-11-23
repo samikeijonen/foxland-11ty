@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@10up/eslint-config": "^2.1.1",
-		"@foxland/stylelint-config": "^1.2.0",
+		"@foxland/stylelint-config": "^1.3.0",
 		"@foxland/webpack-tiny-helpers": "^1.0.3",
 		"@wordpress/eslint-plugin": "^7.1.0",
 		"cross-env": "^7.0.2",
@@ -58,6 +58,7 @@
 		"postcss-mixins": "^6.2.3",
 		"postcss-nested": "^4.2.3",
 		"postcss-preset-env": "^6.7.0",
-		"prettier": "^2.1.1"
+		"prettier": "^2.1.1",
+		"stylelint": "^13.8.0"
 	}
 }
