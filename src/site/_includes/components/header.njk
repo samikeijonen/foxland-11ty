@@ -6,10 +6,25 @@
 		{% bundledCss %}
 		<title>{{ title }} - {{ site.title }}</title>
 
+		<meta property="og:site_name" content="{{ site.title }}" />
+		<meta property="og:title" content="{{ title }} - {{ site.title }}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{site.url}}{{ page.url }}" />
+
 		{% if title %}
 			<meta name="description" content="{{ title }}" />
 			<meta name="twitter:description" content="{{ title }}" />
 			<meta property="og:description" content="{{ title }}" />
+		{% endif %}
+
+		{% if socialImage %}
+			<meta property="og:image" content="{{ socialImage }}" />
+			<meta name="twitter:image" content="{{ socialImage }}" />
+		{% endif %}
+
+		{% if socialImageAlt %}
+			<meta property="og:image:alt" content="{{ socialImageAlt }}" />
+			<meta name="twitter:image:alt" content="{{ socialImageAlt }}" />
 		{% endif %}
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">

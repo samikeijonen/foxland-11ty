@@ -9,6 +9,8 @@ permalink: "{{ blogpost.slug }}/index.html"
 {% extends "layouts/base.njk" %}
 
 {% set title = blogpost.title.rendered %}
+{% set socialImage = blogpost._embedded['wp:featuredmedia']['0'].source_url %}
+{% set socialImageAlt = blogpost._embedded['wp:featuredmedia']['0'].alt_text %}
 {% set id = blogpost.id %}
 {% set author = users | thisPostAuthor(blogpost.author) %}
 
