@@ -5,7 +5,7 @@ const htmlmin = require("html-minifier");
 
 const isDev = process.env.NODE_ENV === "development";
 
-const manifestPath = path.resolve(__dirname, "dist", "assets", "manifest.json");
+const manifestPath = path.resolve(__dirname, "dist", "assets", "asset-manifest.json");
 const manifest = isDev
 	? {
 		"index.js": "/assets/index.js",
