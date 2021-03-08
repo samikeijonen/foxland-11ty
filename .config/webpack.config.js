@@ -1,7 +1,6 @@
 const { helpers, loaders, plugins, presets } = require( '@foxland/webpack-tiny-helpers' );
 const { filePath } = helpers;
 
-const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -58,11 +57,6 @@ module.exports = {
 	},
 	plugins: [
 		...config.plugins,
-		// Remove the extra JS files Webpack creates for CSS entries.
-		// This should be fixed in Webpack 5.
-		new FixStyleOnlyEntriesPlugin({
-			silent: true,
-		}),
 		// Extract CSS into individual files.
 		new MiniCssExtractPlugin({
 			filename: `${baseFilename}.css`,
