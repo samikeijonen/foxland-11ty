@@ -112,7 +112,7 @@
  * Acts like a body of the editor.
  * Give more specifity to overwrite Core style.
  */
-.edit-post-visual-editor.editor-styles-wrapper {
+.editor-styles-wrapper.editor-styles-wrapper {
 	@mixin typography;
 }
 
