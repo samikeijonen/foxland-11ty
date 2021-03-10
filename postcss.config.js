@@ -15,7 +15,7 @@ module.exports = ({ env, file }) => ({
 			file.includes('editor')
 				? {
 						scopeTo: '.editor-styles-wrapper',
-						ignore: [':root', '.edit-post-visual-editor.editor-styles-wrapper'],
+						ignore: [':root', '.editor-styles-wrapper.editor-styles-wrapper'],
 						remove: ['html', ':disabled', '[readonly]', '[disabled]'],
 						tags: ['button', 'input', 'label', 'select', 'textarea', 'form'],
 				  }
