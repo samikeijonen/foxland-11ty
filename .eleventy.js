@@ -5,30 +5,18 @@ const htmlmin = require("html-minifier");
 
 const isDev = process.env.NODE_ENV === "development";
 
-const manifestPath = path.resolve(__dirname, "dist", "assets", "asset-manifest.json");
-const manifest = isDev
-	? {
-		"index.js": "/assets/index.js",
-		"main.css": "/assets/main.css",
-	}
-	: JSON.parse(fs.readFileSync(manifestPath, { encoding: "utf8" }));
-
 module.exports = function(eleventyConfig) {
 	// Layout aliases make templates more portable.
 	eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
 
 	// Adds a universal shortcode to embed bundled CSS. In Nunjack templates: {% bundledCss %}
 	eleventyConfig.addShortcode("bundledCss", function() {
-	return manifest["main.css"]
-		? `<link href="${manifest["main.css"]}" rel="stylesheet" />`
-		: "";
+		return `<link href="/assets/main.css" rel="stylesheet" />`;
 	});
 
 	// Adds a universal shortcode to embed bundled JS. In Nunjack templates: {% bundledJs %}
 	eleventyConfig.addShortcode("bundledJs", function() {
-	return manifest["index.js"]
-		? `<script async src="${manifest["index.js"]}"></script>`
-		: "";
+		return `<script src="/assets/main.js"></script>`;
 	});
 
 	// Readable date.
@@ -118,8 +106,8 @@ module.exports = function(eleventyConfig) {
 	// Copy external dependencies to dist.
 	eleventyConfig.addPassthroughCopy({ "src/vendor": "vendor" });
 
-	// Reload the page every time the JS/CSS are changed.
-	eleventyConfig.setBrowserSyncConfig({ files: [manifestPath] });
+	// Reload the page every time the CSS/JS are changed.
+	eleventyConfig.setBrowserSyncConfig({ files: [ 'dist/assets/**/*.css', 'dist/assets/**/*.js' ] });
 
 	return {
 		dir: {
