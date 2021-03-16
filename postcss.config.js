@@ -12,7 +12,7 @@ module.exports = ({ env, file }) => ({
 		autoprefixer: {},
 		// Prefix editor styles with class `editor-styles-wrapper`.
 		'postcss-editor-styles':
-			file === 'editor.css'
+			file.basename === 'editor.css'
 				? {
 						scopeTo: '.editor-styles-wrapper',
 						ignore: [':root', '.editor-styles-wrapper.editor-styles-wrapper'],
