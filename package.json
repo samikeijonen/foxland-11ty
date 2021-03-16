@@ -10,11 +10,14 @@
 	},
 	"scripts": {
 		"build": "run-s clean build:assets build:site",
-		"build:assets": "cross-env NODE_ENV=production postcss src/css/main.css --dir dist/assets",
+		"build:assets": "cross-env NODE_ENV=production run-s build:css build:js",
+		"build:css": "cross-env NODE_ENV=production postcss src/css/main.css --dir dist/assets",
+		"build:js": "cross-env NODE_ENV=production rollup --config",
 		"build:site": "cross-env NODE_ENV=production eleventy",
 		"clean": "rm -rf ./dist",
 		"dev": "run-p dev:*",
-		"dev:assets": "cross-env NODE_ENV=development postcss src/css/main.css --dir dist/assets --watch",
+		"dev:css": "cross-env NODE_ENV=development postcss src/css/main.css --dir dist/assets --watch",
+		"dev:js": "cross-env NODE_ENV=development rollup --config --watch",
 		"dev:site": "cross-env NODE_ENV=development eleventy --serve",
 		"lint:css": "stylelint './src/css/**/*.css'",
 		"lint:js": "eslint './src/js/**/*.js'"
@@ -39,7 +42,8 @@
 		"postcss-mixins": "^7.0.3",
 		"postcss-nested": "^5.0.5",
 		"postcss-preset-env": "^6.7.0",
-		"stylelint": "^13.12.0",
-		"vite": "^2.0.5"
+		"rollup": "^2.41.3",
+		"rollup-plugin-terser": "^7.0.2",
+		"stylelint": "^13.12.0"
 	}
 }
