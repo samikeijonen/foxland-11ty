@@ -6,21 +6,21 @@
 	&.alignright {
 		text-align: right;
 	}
+}
 
-	&__link {
-		@mixin button-block;
-		display: inline-block;
-		text-decoration: none;
+.wp-block-button__link {
+	@mixin button-block;
+	display: inline-block;
+	text-decoration: none;
 
-		&:visited {
-			color: var(--color-white);
-		}
+	&:visited {
+		color: var(--color-white);
+	}
 
-		&:hover,
-		&:focus,
-		&:active {
-			@mixin button-block-hover;
-		}
+	&:hover,
+	&:focus,
+	&:active {
+		@mixin button-block-hover;
 	}
 }
 
